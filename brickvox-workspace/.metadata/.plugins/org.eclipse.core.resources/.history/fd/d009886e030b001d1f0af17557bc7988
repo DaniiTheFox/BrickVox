@@ -1,0 +1,15 @@
+package com.BoniiKwiiDz.plugin;
+
+import java.io.IOException;
+
+import com.brickvox.plugin.*;
+
+public class Main {
+	public static void main(String[] args){
+		Bricks server = new Bricks("test plugin 1");
+		System.out.println("hello from plugin inside logs");
+		for(int i = 0; i < 1024; i++) {
+			server.sendChat("hello brickvox from java", i);
+		}
+	}
+}

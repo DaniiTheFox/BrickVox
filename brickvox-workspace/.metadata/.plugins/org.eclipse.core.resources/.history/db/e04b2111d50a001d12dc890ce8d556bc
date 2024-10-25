@@ -1,0 +1,10 @@
+package com.BoniiKwiiDz.plugin;
+
+import com.brickvox.plugin.*;
+
+public class Main {
+	Main(String[] args){
+		Bricks server = new Bricks();}
+		System.out.println("hello from plugin");
+	}
+}

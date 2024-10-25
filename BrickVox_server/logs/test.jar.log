@@ -1,0 +1,6 @@
+Build tools version: 0.1
+logged in with credentials: localhost, bonii_vw, boniic6h12o6+!, Voxel_World
+hello from plugin inside logs version 6.0
+packet sent: INSERT INTO chat_data (Msg_Data,User_Sent,Session) VALUES ('< SYSTEM >>HELLO BRICKVOX FROM JAVA','SERVER',65);
+Object was created already updating...
+packet sent: UPDATE custom_object SET obCode = '',Sesion=0,img_ul='http://www.bonisoft.slpmx.com/test.bmp' WHERE Nameob='java_coffe';

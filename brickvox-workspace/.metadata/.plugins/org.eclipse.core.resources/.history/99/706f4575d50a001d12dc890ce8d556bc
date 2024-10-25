@@ -1,0 +1,44 @@
+package com.Classtest.plugin;
+
+import java.io.*;
+import java.sql.*;
+import java.util.Scanner;
+
+public class Bricks{
+	Bricks(String pluginName) throws IOException{
+		/*
+		 * ------------------------------
+		 * - FETCH THE AUTH CREDENTIALS -
+		 * ------------------------------
+		 * */
+		File directory = new File("../");
+		if(!directory.exists()) {
+			 directory.mkdir();
+		}
+		File credentials = new File(directory,"loginCredentials.auth");
+		if(!credentials.exists()) {
+			System.out.println("Could not find file");
+			System.exit(-1);
+		}
+		// - READ THE LOGINCREDENTIALS.AUTH FILE
+		Scanner rdf = new Scanner(credentials);
+		// - AUTHENTICATE CREDENTIALS
+		while (rdf.hasNextLine()) {
+			// -------------------------------
+			String blockr = rdf.nextLine();   
+			String[] cmdr = blockr.split(" ");
+			// -------------------------------
+			String SRVR = "";
+			String USER = "";
+			String PASW = "";
+			String CTDB = "";
+			if(cmdr[0].equalsIgnoreCase("h")) {SRVR = cmdr[1];}
+			if(cmdr[0].equalsIgnoreCase("u")) {USER = cmdr[1];}
+			if(cmdr[0].equalsIgnoreCase("p")) {PASW = cmdr[1];}
+			if(cmdr[0].equalsIgnoreCase("d")) {CTDB = cmdr[1];}
+			System.out.println("logged in with credentials: " + SRVR + ", " + USER + ", " + PASW + ", "+ CTDB);
+		}
+		// - CLOSE THE FILES
+		rdf.close();
+	}
+}

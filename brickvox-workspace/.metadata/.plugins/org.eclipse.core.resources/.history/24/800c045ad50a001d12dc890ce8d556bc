@@ -1,0 +1,10 @@
+package com.BoniiKwiiDz.plugin;
+
+import com.ClassTest.plugin.*;
+
+public class Main {
+	Main(String[] args){
+		Brick server = new Brick();
+		System.out.println("hello from plugin");
+	}
+}
